@@ -1,0 +1,195 @@
+/* ---------- Reset ---------- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ---------- Body ---------- */
+body {
+  font-family: 'Poppins', sans-serif;
+  background: radial-gradient(#f5ecab, #fff);
+  color: #555;
+  line-height: 1.5;
+}
+
+/* ---------- Wrapper ---------- */
+.style {
+  max-width: 1300px;
+  margin: auto;
+  padding: 0 25px;
+}
+
+/* ---------- Navbar ---------- */
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 0;
+}
+
+nav ul {
+  list-style: none;
+}
+
+nav ul li {
+  display: inline-block;
+  margin-right: 20px;
+}
+
+nav ul li:last-child {
+  margin-right: 0;
+}
+
+nav a {
+  text-decoration: none;
+  color: #555;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+nav a:hover {
+  color: #c99b2e; /* soft honey color */
+}
+
+/* ---------- Hero Banner ---------- */
+.hero {
+  width: 100%;
+  max-height: 400px;       /* maximum height of the banner */
+  overflow: hidden;
+}
+
+.hero img {
+  width: 100%;             /* full width */
+  height: 100%;            /* fill the container */
+  object-fit: cover;       /* maintain aspect ratio and crop if needed */
+  display: block;          /* remove unwanted gaps */
+}
+
+/* ---------- Main Row ---------- */
+.row {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-top: 50px;
+  gap: 20px;
+}
+
+/* ---------- Product Images ---------- */
+.pic {
+  flex-basis: 30%;
+  min-width: 250px;
+  text-align: center;
+}
+
+.pic img {
+  width: 100%;
+  max-width: 300px;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+}
+
+.pic img:hover {
+  transform: scale(1.05);
+}
+
+/* ---------- Text Elements ---------- */
+.main h2,
+.products-title {
+  text-align: center;
+  color: #3d3a1a; /* dark honey text */
+  margin-bottom: 10px;
+}
+
+.main p,
+.about p {
+  text-align: center;
+  color: #6a6332;
+  font-size: 1.1rem;
+}
+
+.about h1 {
+  text-align: center;
+}
+
+/* ---------- Products Grid ---------- */
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  justify-items: center;
+  padding: 20px;
+}
+
+.product {
+  text-align: center;
+  background-color: #fff;
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  width: 100%;
+  max-width: 250px;
+  transition: transform 0.3s ease;
+}
+
+.product img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+}
+
+.product img:hover {
+  transform: scale(1.05);
+}
+
+.product h4 {
+  margin: 10px 0 5px;
+  color: #3d3a1a;
+}
+
+.product p {
+  color: #6a6332;
+  font-weight: bold;
+}
+
+/* ---------- Responsive Design ---------- */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+  }
+
+  nav ul {
+    text-align: center;
+    margin-top: 10px;
+  }
+
+  nav ul li {
+    display: block;
+    margin: 10px 0;
+  }
+
+  .row {
+    flex-direction: column;
+    margin-top: 30px;
+  }
+
+  .pic {
+    flex-basis: 100%;
+  }
+
+  .product-grid {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  }
+}
+
+/* Optional styling for better hero section text overlay (if needed in future) */
+.hero-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  text-align: center;
+}
